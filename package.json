@@ -8,6 +8,10 @@
 	"contributors": [
 		"Konstantin Kovalev <constantiner@gmail.com>"
 	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Constantiner/react-express-boilerplate.git"
+	},
 	"keywords": [
 		"JavaScript",
 		"Node",
@@ -16,6 +20,10 @@
 		"Express",
 		"Full stack"
 	],
+	"bugs": {
+		"url": "https://github.com/Constantiner/react-express-boilerplate/issues"
+	},
+	"homepage": "https://github.com/Constantiner/react-express-boilerplate#readme",
 	"dependencies": {
 		"cookie-parser": "^1.4.3",
 		"debug": "^4.1.0",
