@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"bin": "bin/www",
 	"description": "A boilerplate for full stack React/Express project",
+	"license": "MIT",
 	"author": "Konstantin Kovalev <constantiner@gmail.com>",
 	"contributors": [
 		"Konstantin Kovalev <constantiner@gmail.com>"
