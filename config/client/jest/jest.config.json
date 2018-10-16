@@ -1,6 +1,8 @@
 {
 	"rootDir": "../../../",
 	"collectCoverageFrom": ["<rootDir>/client/**/*.{js,jsx}"],
+	"coverageDirectory": "<rootDir>/coverage/client/",
+	"collectCoverage": true,
 	"resolver": "jest-pnp-resolver",
 	"setupFiles": ["react-app-polyfill/jsdom"],
 	"testMatch": ["<rootDir>/client/**/__tests__/**/*.{js,jsx}", "<rootDir>/client/**/?(*.)(spec|test).{js,jsx}"],
