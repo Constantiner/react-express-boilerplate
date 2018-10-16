@@ -81,7 +81,7 @@
 	"scripts": {
 		"start:client": "node -r esm scripts/client-start.js",
 		"build:client": "node -r esm scripts/client-build.js",
-		"test:client": "node -r esm scripts/client-test.js --config config/jest/jest.config.json",
+		"test:client": "node -r esm scripts/client-test.js --config config/client/jest/jest.config.json",
 		"start:server:dev": "NODE_ENV=development node -r esm ./bin/www",
 		"start:server": "NODE_ENV=production node -r esm ./bin/www",
 		"debug:server": "npx nodemon --inspect=127.0.0.1:9329 -r esm ./bin/www",
