@@ -79,7 +79,7 @@
 		"workbox-webpack-plugin": "3.6.2"
 	},
 	"scripts": {
-		"start:client": "node scripts/client-start.js",
+		"start:client": "node -r esm scripts/client-start.js",
 		"build:client": "node -r esm scripts/client-build.js",
 		"test:client": "node -r esm scripts/client-test.js",
 		"start:server:dev": "NODE_ENV=development node -r esm ./bin/www",
