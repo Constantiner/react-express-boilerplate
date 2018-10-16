@@ -7,10 +7,10 @@ import openBrowser from "react-dev-utils/openBrowser";
 import { choosePort, createCompiler, prepareProxy, prepareUrls } from "react-dev-utils/WebpackDevServerUtils";
 import webpack from "webpack";
 import WebpackDevServer from "webpack-dev-server";
-import { initEnvPromiseFactory } from "../config/clientEnvAsync";
-import paths from "../config/clientPaths";
-import configFactory from "../config/webpack.config.dev";
-import devServerConfigFactory from "../config/webpackDevServer.config";
+import { initEnvPromiseFactory } from "../config/client/clientEnvAsync";
+import paths from "../config/client/clientPaths";
+import configFactory from "../config/client/webpack.config.dev";
+import devServerConfigFactory from "../config/client/webpackDevServer.config";
 
 // Do this as the first thing so that any code reading it knows the right env.
 process.env.BABEL_ENV = "development";
