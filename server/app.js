@@ -7,9 +7,9 @@ import usersRouter from "./routes/users";
 import envConfig from "./util/envConfig";
 
 setTimeout(() => {
+	/* eslint-disable-next-line no-console */
 	envConfig("server/.env").catch(e => console.error(e));
 }, 10000);
-
 
 const app = express();
 
