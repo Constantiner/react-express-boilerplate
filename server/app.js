@@ -6,20 +6,21 @@ import indexRouter from "./routes";
 import usersRouter from "./routes/users";
 import envConfig from "./util/envConfig";
 
-setTimeout(() => {
-	/* eslint-disable-next-line no-console */
-	envConfig("server/.env").catch(e => console.error(e));
-}, 10000);
+const getApp = async () => {
+	await envConfig("server/.env");
 
-const app = express();
+	const app = express();
 
-app.use(logger("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+	app.use(logger("dev"));
+	app.use(express.json());
+	app.use(express.urlencoded({ extended: false }));
+	app.use(cookieParser());
+	app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
-app.use("/users", usersRouter);
+	app.use("/", indexRouter);
+	app.use("/users", usersRouter);
 
-export default app;
+	return app;
+};
+
+export default getApp;
