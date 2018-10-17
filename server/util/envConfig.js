@@ -4,7 +4,7 @@ import dotenvExpand from "dotenv-expand";
 
 const config = async envPath => {
 	const dotenvFiles = await getConfigFiles(envPath);
-	dotenvFiles.forEach(({ file }) => {
+	dotenvFiles.forEach(file => {
 		dotenvExpand(
 			dotenv.config({
 				path: file

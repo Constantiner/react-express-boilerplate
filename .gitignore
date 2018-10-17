@@ -18,6 +18,10 @@
 .env.development.local
 .env.test.local
 .env.production.local
+nodemon.local.json
+nodemon.development.local.json
+nodemon.test.local.json
+nodemon.production.local.json
 
 npm-debug.log*
 yarn-debug.log*

@@ -93,7 +93,7 @@
 		"test:client": "node -r esm scripts/client-test.js --config config/client/jest/jest.config.json",
 		"start:server:dev": "NODE_ENV=development node -r esm ./bin/www",
 		"start:server": "NODE_ENV=production node -r esm ./bin/www",
-		"debug:server": "npx nodemon --inspect=127.0.0.1:9329 -r esm ./bin/www",
+		"debug:server": "node -r esm scripts/server-debug.js",
 		"lint": "npx eslint '**/**/*.{js,mjs,jsx}'",
 		"format": "npx prettier 'server/**/*.{js,mjs,json,jsx}' 'client/**/*.{js,mjs,json,jsx}' 'config/**/*.{js,mjs,json,jsx}' 'scripts/**/*.{js,mjs,json,jsx}' --write"
 	},
@@ -120,10 +120,5 @@
 		"node": ">=8.5.0",
 		"npm": ">=5.2.0"
 	},
-	"@std/esm": "cjs",
-	"nodemonConfig": {
-		"env": {
-			"NODE_ENV": "development"
-		}
-	}
+	"@std/esm": "cjs"
 }
