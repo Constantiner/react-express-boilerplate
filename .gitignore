@@ -26,6 +26,8 @@ log4js.local.json
 log4js.development.local.json
 log4js.test.local.json
 log4js.production.local.json
+jest.config.local.json
+jest.config.test.local.json
 
 npm-debug.log*
 yarn-debug.log*

@@ -26,7 +26,7 @@ const getNodemonConfig = async () => {
 	const nodemonConfigFiles = await getConfigFiles("config/server/nodemon.json");
 	if (nodemonConfigFiles.length > 0) {
 		// Return the most actual config
-		return nodemonConfigFiles.pop();
+		return nodemonConfigFiles[0];
 	}
 };
 
