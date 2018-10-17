@@ -5,12 +5,12 @@
  */
 
 import getApp from "../server/app";
-import debugFn from "debug";
 import http from "http";
+import log4js from "log4js";
 
 getApp()
 	.then(app => {
-		const debug = debugFn("react-express-boilerplate-server:server");
+		const serverLogger = log4js.getLogger("react-express-boilerplate.server");
 
 		/**
 		 * Get port from environment and store in Express.
@@ -62,13 +62,11 @@ getApp()
 			// handle specific listen errors with friendly messages
 			switch (error.code) {
 				case "EACCES":
-					/* eslint-disable-next-line no-console */
-					console.error(bind + " requires elevated privileges");
+					serverLogger.error(bind + " requires elevated privileges");
 					process.exit(1);
 					break;
 				case "EADDRINUSE":
-					/* eslint-disable-next-line no-console */
-					console.error(bind + " is already in use");
+					serverLogger.error(bind + " is already in use");
 					process.exit(1);
 					break;
 				default:
@@ -82,7 +80,7 @@ getApp()
 		function onListening() {
 			const addr = server.address();
 			const bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
-			debug("Listening on " + bind);
+			serverLogger.debug("Listening on " + bind);
 		}
 	})
 	.catch(e => {
