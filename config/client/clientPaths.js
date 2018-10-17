@@ -45,7 +45,7 @@ export default {
 	appPackageJson: resolveApp("package.json"),
 	appSrc: resolveApp("client"),
 	yarnLockFile: resolveApp("yarn.lock"),
-	testsSetup: resolveApp("client/setupTests.js"),
+	testsSetup: resolveApp("__tests__/client/setupTests.js"),
 	proxySetup: resolveApp("client/setupProxy.js"),
 	appNodeModules: resolveApp("node_modules"),
 	publicUrl: getPublicUrl(resolveApp("package.json")),

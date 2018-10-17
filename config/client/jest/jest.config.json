@@ -5,7 +5,7 @@
 	"collectCoverage": true,
 	"resolver": "jest-pnp-resolver",
 	"setupFiles": ["react-app-polyfill/jsdom"],
-	"testMatch": ["<rootDir>/client/**/__tests__/**/*.{js,jsx}", "<rootDir>/client/**/?(*.)(spec|test).{js,jsx}"],
+	"testMatch": ["<rootDir>/__tests__/client/**/*.{js,jsx}"],
 	"testEnvironment": "jsdom",
 	"testURL": "http://localhost",
 	"transform": {
