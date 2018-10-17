@@ -3,16 +3,11 @@ import express from "express";
 import createError from "http-errors";
 import logger from "morgan";
 import path from "path";
-import { realpath } from "fs";
 import usersRouter from "./routes/users";
 import envConfig from "./util/envConfig";
-import { promisify } from "util";
-
-const realpathAsync = promisify(realpath);
 
 const getApp = async () => {
 	await envConfig("server/.env");
-	const cwd = await realpathAsync(process.cwd());
 
 	const app = express();
 
@@ -20,11 +15,11 @@ const getApp = async () => {
 	app.use(express.json());
 	app.use(express.urlencoded({ extended: false }));
 	app.use(cookieParser());
-	app.use(express.static(path.join(cwd, "public")));
+	app.use(express.static(path.join(__dirname, "../public")));
 
 	app.use("/users", usersRouter);
 	app.use("/*", (req, res) => {
-		res.sendFile(path.join(cwd, "/public/index.html"));
+		res.sendFile(path.join(__dirname, "../public/index.html"));
 	});
 
 	// catch 404 and forward to error handler
