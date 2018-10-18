@@ -87,3 +87,7 @@ typings/
 
 # next.js build output
 .next
+
+# Allow server/.env as a sample to override with custom local versions
+# Remove this line if you wish not to store it in Git
+!/server/.env
