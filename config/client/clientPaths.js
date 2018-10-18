@@ -34,9 +34,9 @@ function getServedPath(appPackageJson) {
 	return ensureSlash(servedUrl, true);
 }
 
-// config after eject: we're in ./config/
+// config after eject: we're in ./config/client/
 export default {
-	dotenv: resolveApp("client/.env"),
+	dotenv: resolveApp("config/client/.env"),
 	appPath: resolveApp("."),
 	appBuild: resolveApp("build"),
 	appPublic: resolveApp("public"),
