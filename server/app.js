@@ -1,17 +1,20 @@
 import cookieParser from "cookie-parser";
 import express from "express";
+import addRequestId from "express-request-id";
 import createError from "http-errors";
+import log4js from "log4js";
 import path from "path";
 import usersRouter from "./routes/users";
 import envConfig from "./util/envConfig";
 import configureLog4js from "./util/log4jsConfig";
-import log4js from "log4js";
 
 const getApp = async () => {
 	await envConfig("server/.env");
 	await configureLog4js();
 
 	const app = express();
+
+	app.use(addRequestId());
 
 	const appLogger = log4js.getLogger("react-express-boilerplate.app");
 
