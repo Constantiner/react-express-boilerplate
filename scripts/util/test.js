@@ -4,7 +4,7 @@ import getConfigFiles from "@constantiner/resolve-node-configs-hierarchy";
 
 const getJestConfigFile = async jestConfigFile => {
 	const configPath = jestConfigFile;
-	const jestConfigFiles = await getConfigFiles(configPath);
+	const jestConfigFiles = await getConfigFiles(configPath, true);
 	if (jestConfigFiles.length > 0) {
 		// Return the most actual config
 		return jestConfigFiles[0];
