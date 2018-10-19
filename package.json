@@ -36,7 +36,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "7.1.0",
-		"@constantiner/resolve-node-configs-hierarchy": "^0.1.2",
+		"@constantiner/resolve-node-configs-hierarchy": "^0.2.0",
 		"@svgr/webpack": "2.4.1",
 		"babel-core": "7.0.0-bridge.0",
 		"babel-eslint": "9.0.0",
