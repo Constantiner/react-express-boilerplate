@@ -1,0 +1,13 @@
+{
+	"rootDir": "../../../",
+	"collectCoverageFrom": ["<rootDir>/server/**/*.js"],
+	"coverageDirectory": "<rootDir>/coverage/server/",
+	"collectCoverage": true,
+	"resolver": "jest-pnp-resolver",
+	"testMatch": ["<rootDir>/__tests__/server/**/*.js"],
+	"testEnvironment": "node",
+	"transform": {
+		"^.+\\.js$": "<rootDir>/node_modules/babel-jest"
+	},
+	"transformIgnorePatterns": []
+}

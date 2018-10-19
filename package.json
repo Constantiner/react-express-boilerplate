@@ -81,6 +81,7 @@
 		"resolve": "1.8.1",
 		"sass-loader": "7.1.0",
 		"style-loader": "0.23.0",
+		"supertest": "^3.3.0",
 		"terser-webpack-plugin": "1.1.0",
 		"url-loader": "1.1.1",
 		"webpack": "4.19.1",
@@ -95,6 +96,7 @@
 		"start:server:dev": "NODE_ENV=development node -r esm ./bin/www",
 		"start:server": "NODE_ENV=production node -r esm ./bin/www",
 		"debug:server": "node -r esm scripts/server-debug.js",
+		"test:server": "node -r esm scripts/server-test.js",
 		"lint": "npx eslint '**/**/*.{js,mjs,jsx}'",
 		"format": "npx prettier 'server/**/*.{js,mjs,json,jsx}' 'client/**/*.{js,mjs,json,jsx}' 'config/**/*.{js,mjs,json,jsx}' 'scripts/**/*.{js,mjs,json,jsx}' --write"
 	},
