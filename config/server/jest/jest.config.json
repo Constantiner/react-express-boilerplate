@@ -9,5 +9,5 @@
 	"transform": {
 		"^.+\\.js$": "<rootDir>/node_modules/babel-jest"
 	},
-	"transformIgnorePatterns": []
+	"transformIgnorePatterns": ["node_modules/(?!@constantiner)/"]
 }

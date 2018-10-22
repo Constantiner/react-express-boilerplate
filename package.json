@@ -35,12 +35,13 @@
 		"log4js": "^3.0.6"
 	},
 	"devDependencies": {
-		"@babel/core": "7.1.0",
+		"@babel/core": "^7.1.2",
+		"@babel/preset-env": "^7.1.0",
 		"@constantiner/resolve-node-configs-hierarchy": "^0.2.0",
 		"@svgr/webpack": "2.4.1",
-		"babel-core": "7.0.0-bridge.0",
+		"babel-core": "^7.0.0-bridge.0",
 		"babel-eslint": "9.0.0",
-		"babel-jest": "23.6.0",
+		"babel-jest": "^23.6.0",
 		"babel-loader": "8.0.4",
 		"babel-plugin-named-asset-import": "^0.2.2",
 		"babel-preset-react-app": "^5.0.4",
@@ -78,6 +79,7 @@
 		"react-app-polyfill": "^0.1.3",
 		"react-dev-utils": "^6.0.5",
 		"react-dom": "^16.5.2",
+		"regenerator-runtime": "^0.12.1",
 		"resolve": "1.8.1",
 		"sass-loader": "7.1.0",
 		"style-loader": "0.23.0",
@@ -98,7 +100,8 @@
 		"debug:server": "node -r esm scripts/server-debug.js",
 		"test:server": "node -r esm scripts/server-test.js",
 		"lint": "npx eslint '**/**/*.{js,mjs,jsx}'",
-		"format": "npx prettier 'server/**/*.{js,mjs,json,jsx}' 'client/**/*.{js,mjs,json,jsx}' 'config/**/*.{js,mjs,json,jsx}' 'scripts/**/*.{js,mjs,json,jsx}' --write"
+		"format": "npx prettier 'server/**/*.{js,mjs,json,jsx}' 'client/**/*.{js,mjs,json,jsx}' 'config/**/*.{js,mjs,json,jsx}' 'scripts/**/*.{js,mjs,json,jsx}' --write",
+		"clear_jest": "npx jest --clearCache"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
