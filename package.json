@@ -68,6 +68,7 @@
 		"jest": "23.6.0",
 		"jest-pnp-resolver": "1.0.1",
 		"jest-resolve": "23.6.0",
+		"log4javascript": "^1.4.15",
 		"mini-css-extract-plugin": "0.4.3",
 		"nodemon": "^1.18.4",
 		"optimize-css-assets-webpack-plugin": "5.0.1",
