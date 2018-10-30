@@ -1,15 +1,8 @@
 import log4javascript from "log4javascript";
 import React, { Component } from "react";
 import "./App.css";
+import "./log4javascript.config";
 import logo from "./logo.svg";
-
-const consoleAppender = new log4javascript.BrowserConsoleAppender();
-const layout = new log4javascript.PatternLayout(`%d{${log4javascript.PatternLayout.DATETIME_DATEFORMAT}} [%-5p] (%c) %m`);
-log4javascript.setShowStackTraces(true);
-consoleAppender.setLayout(layout);
-const log = log4javascript.getRootLogger();
-log.addAppender(consoleAppender);
-log.setLevel(log4javascript.Level.DEBUG);
 
 const appLogger = log4javascript.getLogger("app");
 
