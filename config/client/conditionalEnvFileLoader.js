@@ -13,11 +13,7 @@ export default function() {
 				if (err) {
 					return callback(err);
 				}
-				callback(
-					null,
-					`// ${realPath}
-${realLog4JsConfig}`
-				);
+				callback(null, realLog4JsConfig);
 			});
 		});
 }
