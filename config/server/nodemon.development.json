@@ -1,5 +1,6 @@
 {
 	"env": {
 		"NODE_ENV": "development"
-	}
+	},
+	"watch": ["bin/www", "server", "config/server/**/*.*", "package.json", "public", "node_modules"]
 }

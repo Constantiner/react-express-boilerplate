@@ -3,9 +3,9 @@ import express from "express";
 const router = express.Router();
 
 /* GET users listing. */
-router.get("/", function(req, res) {
+router.get("/me", function(req, res) {
 	res.json({
-		username: "constantiner",
+		homePage: "https://github.com/Constantiner",
 		firstName: "Konstantin",
 		lastName: "Kovalev"
 	});
