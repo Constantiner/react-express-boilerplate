@@ -5,10 +5,10 @@ describe("Main server application tests", () => {
 	it("should respond for users get route", async () => {
 		expect.assertions(3);
 		const app = await getApp();
-		const response = await request(app).get("/users");
+		const response = await request(app).get("/users/me");
 		expect(response.statusCode).toBe(200);
 		expect(response.body).toEqual({
-			username: "constantiner",
+			homePage: "https://github.com/Constantiner",
 			firstName: "Konstantin",
 			lastName: "Kovalev"
 		});
