@@ -1,0 +1,30 @@
+{
+	"parserOptions": {
+		"ecmaVersion": 2017,
+		"sourceType": "module"
+	},
+	"env": {
+		"es6": true,
+		"browser": true,
+		"node": true,
+		"jest": true
+	},
+	"rules": {
+		"semi": ["error", "always"],
+		"node/no-unsupported-features/es-syntax": [
+			"error",
+			{
+				"version": ">=8.5.0",
+				"ignores": ["modules"]
+			}
+		]
+	},
+	"extends": [
+		"eslint:recommended",
+		"prettier",
+		"plugin:node/recommended",
+		"plugin:security/recommended",
+		"jest-enzyme",
+		"plugin:jest/recommended"
+	]
+}
