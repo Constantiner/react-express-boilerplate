@@ -9,11 +9,11 @@ export default function() {
 		.then(paths => paths[0])
 		.then(realPath => {
 			this.addDependency(realPath);
-			fs.readFile(realPath, "utf-8", (err, realLog4JsConfig) => {
+			fs.readFile(realPath, "utf-8", (err, resolvedFile) => {
 				if (err) {
 					return callback(err);
 				}
-				callback(null, realLog4JsConfig);
+				callback(null, resolvedFile);
 			});
 		});
 }
